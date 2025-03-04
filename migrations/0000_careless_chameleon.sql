@@ -1,0 +1,20 @@
+CREATE TABLE "users" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"email" varchar(320),
+	"email_verified" boolean DEFAULT false NOT NULL,
+	"password" varchar(60) NOT NULL,
+	"phone" varchar(20),
+	"phone2" varchar(20),
+	"role" varchar(20) DEFAULT 'STUDENT' NOT NULL,
+	"google_id" varchar(255),
+	"facebook_id" varchar(255),
+	"kakao_id" varchar(255),
+	"naver_id" varchar(255),
+	"apple_id" varchar(255),
+	"avatar" varchar(256),
+	"allowEmail" boolean DEFAULT false,
+	"allowSMS" boolean DEFAULT false,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp,
+	"deleted_at" timestamp
+);
